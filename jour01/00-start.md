@@ -19,3 +19,7 @@
 
 - <https://formation.webdevpro.net/python-initiation>
 - identifiant dans la suite du ....
+
+# Google > 
+    rechercher "webdevproformation github"
+    coucou les amis
