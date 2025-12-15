@@ -87,3 +87,8 @@ La balise ouvrante est composée de :
 
 <a> Anchor 
 ```
+
+# créer notre premier page html 
+
+- fichier .html
+- créer le fichier `02-hello.html`
