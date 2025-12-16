@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="d-flex border border-2 border-danger justify-content-between">
+        <p class="bg-primary">Lorem, ipsum.</p>
+        <p class="bg-dark text-white">Sit, vitae!</p>
+    </div>
+    <!-- 
+        gestion de l'espace horizale 
+        justify-content-end espace restant va être mis AVANT les éléments
+        justify-content-center couper l'espace en 2 50% à gauche  50% à droite
+        justify-content-between espace restant va être mis entre 
+    -->
+
+    <div class="d-flex border border-2 border-success align-items-center">
+        <img src="https://placehold.co/40x400" alt="" class="border border-1 border-danger">
+        <p class="bg-info mb-0">Lorem, ipsum dolor.</p>
+    </div>
+    <!--
+        lorsque vous utilisez display flex => balises se mettent l'une côté de l'autre 
+        MAIS si les balises n'ont pas la même hauteur
+        display flex va "stretch" étirer les balises pour quelles aient toutes la même hauteur 
+        ici il va prendre la hauteur de l'image et il va étirer le p pour qu'il ait la même hauteur
+
+        align-items-stretch (par défaut)
+        align-items-start
+        align-items-end
+        align-items-center
+    -->
+
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, voluptatibus.
+
+</body>
+</html>
