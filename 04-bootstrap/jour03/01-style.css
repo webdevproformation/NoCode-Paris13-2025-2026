@@ -54,4 +54,31 @@ transition
 animation
 
 
+
+Taille 
+
+taille de texte est calculé de manière relative 
+
+taille par défaut des textes de la page : 16px  
+c'est la taille des p 
+
+
+taile des h1 => 32px   (ce qui correspond à 2 fois la taille de base 16px)
+
+html{
+    font-size:16px; // taille de base 
+    
+}
+grâce aux unités relatives (rem) il est possible de faire le taille de police responsive 
+r root 
+em  cadratin
+
+p{
+    font-size: 1rem; => 16px
+}
+
+h1{
+    font-size: 2rem; 2 x 16 => 32px 
+}
+
 */
