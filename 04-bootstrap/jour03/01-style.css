@@ -1,0 +1,57 @@
+.title{
+    text-align: center;
+    color: blue; 
+}
+/*
+.title => sélectionner toutes les balises qui ont l'attribut class="title"
+donc on sélectionne le h1 et le h2 
+
+pour ces deux balises je veux que le texte soit centré
+
+lorsque l'on fait du css 
+on va avoir 1 class qui contient plusieurs modification visuelle 
+*/
+
+/*
+
+top 30 des règles css à connaitre 
+
+texte 
+
+color : couleur texte 
+font-size : taille des lettres
+text-align : alignement du texte (centré)
+font-weight : gras de la police
+line-height : hauteur de ligne
+font-family : la police de caractère
+text-decoration : souligner ou non
+letter-spacing : espace entre les lettres
+... 
+
+
+balise de zone (div / header / section)
+
+- margin : espace hors la zone
+- padding : espace dans la zone
+- border : bordure 
+- display : flex / none / grid
+- background : fond de la zone
+- box-shadow : ombre de la zone
+- width  :  largeur de la boite
+- height  : hauteur de la boite 
+- max-width : largeur maximum de la boite ET si la fenêtre du navigateur est inférieur à la valeur alors la fenêtre va prendre la largeur de la fenêtre (reponsive)
+- min-width :  largeur minimum de la boite ET si le contenu est supérieur à la valeur alors la boite va prendre la largeur du contenu 
+- border-radius : arrondi des coins
+- position : permet de positionner un élément de manière fixe par rapport à l'écran 
+    top / left / right / bottom / inset
+    z-index : position sur l'axe de z de la page 
+
+---
+
+animation
+
+transition
+animation
+
+
+*/
