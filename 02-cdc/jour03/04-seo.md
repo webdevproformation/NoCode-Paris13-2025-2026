@@ -72,3 +72,18 @@ Mettre des backlinks : faire en sorte qu'il y ait des sites internet qui envoie 
 
 
 => SEO => neilpatel ubersuggest
+
+---
+
+Analyse via des outils automatiques 
+
+- SEM Rush
+- Yoast
+- LightHouse (outil intégré directement dans Chrome)
+- SEO Quake => extension de Google Chrome 
+
+
+
+- https://formation.webdevpro.net/seo/
+- login : seo
+- password : seo 
