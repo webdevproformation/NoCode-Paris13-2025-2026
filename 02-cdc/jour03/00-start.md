@@ -25,6 +25,6 @@
 Il nous reste à voir ensemble :
 
 - User Cases  / Fonctions du site
-- MCD : Modèle Conceptuel des Données xx
-- Sécurité (2 jours ensemble)
+- [x] MCD : Modèle Conceptuel des Données 
+- [] Sécurité (2 jours ensemble)
 - Référencement Naturel
