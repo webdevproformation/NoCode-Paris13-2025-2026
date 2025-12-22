@@ -23,3 +23,17 @@ image{
     object-fit: cover ; => qui va faire en sorte que image ne soit pas déformée
                         => rogner l'image pour quelle rentre dans la zone sans déforme
 }
+
+
+<div class="container">
+    <header class="header">
+        <div class="header-hero">
+            <h1 class="header-hero-title">
+            <p class="header-hero-subtitle">
+            <button class="header-hero-btn">
+        </div>
+        <div class="header-grid">
+            img class="header-grid-img"
+        </div>
+    </header>
+<div>

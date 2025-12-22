@@ -1,0 +1,19 @@
+TP module : LES FONDAMENTAUX DE LA PROGRAMMATION WEB HTML/CSS/BOOTSTRAP
+
+IFOCOP Paris 13 - Formation Diw NoCode
+
+---
+
+Ce TP n'est pas évalué, il a pour objectif de vous faire pratiquer l'ensemble des concepts vus en cours.
+La date limite de réalisation est le 8 Janvier 2026.
+Ce TP sera corrigé le 9 Janvier en cours
+
+---
+
+Question 1 :
+
+Réaliser la maquette ci-joint en utilisant html et la librairie Bootstrap 
+
+Question 2 : 
+
+Réaliser la maquette ci-joint en utilisant le site internet NoCode Webflow
