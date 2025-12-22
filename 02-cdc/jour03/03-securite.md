@@ -47,3 +47,24 @@ execute([
 ## Vol de base de données
 
 <https://informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/>
+
+have i been pwned
+
+<https://haveibeenpwned.com/>
+
+Quels sont les règles / les processus / le code qui va bloquer les attaques de type ?
+
+- INJECTION SQL => injection avec la langage SQL
+- INJECTION CSRF =>  injection avec du html  
+- INJECTION XSS => injection avec du Javascript
+
+<img src="script.js" alt="">
+
+Worm => vers 
+
+Facebook => myspace  <https://en.wikipedia.org/wiki/Samy_%28computer_worm%29>
+
+si tu ou
+
+
+<div style="background(url'javascript')"></div>
