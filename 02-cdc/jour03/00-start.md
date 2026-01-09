@@ -24,7 +24,7 @@
 
 Il nous reste à voir ensemble :
 
-- [] User Cases  / Fonctions du site
+- [x] User Cases  / Fonctions du site
 - [x] MCD : Modèle Conceptuel des Données 
 - [x] Sécurité (2 jours ensemble)
-- [] Référencement Naturel
+- [x] Référencement Naturel
