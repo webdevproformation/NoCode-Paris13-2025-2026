@@ -55,7 +55,7 @@
     </header>
     <main>
         <!-- attention il faut mettre l' attribut id="portfolio" pour associer la zone html avec l'ancre dans le menu -->
-        <section id="portfolio" class="container my-4">
+        <section id="portfolio" class="container py-4">
             <div class="text-center">
                 <!-- js-btn-filter permettra par la suite de rajouter un effet en javascript  -->
                 <button class="btn btn-success btn-sm js-btn-filter">Tous les projets</button>
@@ -70,16 +70,57 @@
                 <img src="https://placehold.co/400x200" alt="" class="grille-img3 rounded">
                 <img src="https://placehold.co/400x200" alt="" class="grille-img4 rounded">
             </div>
-
-
         </section>
-        <section id="about">
-
+        <section id="about" class="bg-secondary py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-md-6 col-md-6 text-white">
+                        <h2 class="h3">Lorem ipsum dolor sit amet.</h2>
+                        <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde repellendus dolores ut doloribus non officia dolore expedita nesciunt quisquam corrupti hic, enim praesentium maxime veniam, eius at facilis voluptatibus perspiciatis vel repellat. Qui quisquam distinctio labore modi earum nihil? Ab obcaecati asperiores necessitatibus similique veniam neque facere laudantium, id quae!</p>
+                        <a href="#" class="btn btn-outline-dark text-uppercase btn-sm">me contacter</a>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="contact">
-
+            <div class="container-700 text-center py-5">
+                <!-- 
+                    text-success text en vert 
+                    text-uppercase toutes les lettres en majuscule 
+                    Nous contacter => NOUS CONTACTER
+                -->
+                <h2 class="text-success text-uppercase fw-bold">Nous contacter</h2>
+                <form action="" class="row mt-4">
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control" placeholder="votre nom">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control" placeholder="votre email">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                         <div class="input-group mb-3">
+                            <span class="input-group-text">@</span>
+                            <textarea class="form-control" rows="8" placeholder="votre message"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-success d-block w-100">Envoyer</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+
+        <!-- <p class="bg-danger py-4">bonjour 1</p>
+        <p class="bg-primary my-4">bonjour 2</p> -->
+
+    </footer>
 </body>
 </html>
