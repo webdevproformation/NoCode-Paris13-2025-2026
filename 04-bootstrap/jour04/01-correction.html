@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1 ajouter bootstrap (la partie css) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- 2 associer mon fichier html avec un fichier css au cas où -->
+    <link rel="stylesheet" href="01-style.css">
+</head>
+<body>
+    <!-- header va contenir le fond de couleur / image -->
+    <header class="bg-dark">
+        <!-- container il va permettre de centrer le contenu quelque soit la largeur de l'écran 
+        si écran est très large => margin à gauche et à droite importante
+        si écran est peu large => petite marge  
+        -->
+        <div class="container">
+            <!-- le composant navbar de bootstrap 
+              il prendre 3 classes : navbar 
+              navbar-expand => responsive design sm md lg ...
+              navbar-dark couleur des textes lien dans le menu 
+            -->
+            <nav class="navbar navbar-expand navbar-dark">
+                <a class="navbar-brand" href="#">
+                    logo
+                </a>
+                <!-- utiliser les ancres dans la page  href="#top"
+                https://fr.wikipedia.org/wiki/Egypte#Geologie
+                -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#top" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item ms-5">
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                    </li>
+                     <li class="nav-item ms-5">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                     <li class="nav-item ms-5">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="text-center py-5 text-white ">
+                <h1 class="fw-bold text-uppercase">Voici votre prochain portfolio</h1>
+                <h2 class="text-uppercase fw-lighter mt-3 h3">un template psd simple et gratuit</h2>
+                <a href="" class="btn btn-outline-success btn-sm mt-3">Mes Travaux</a>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <!-- attention il faut mettre l' attribut id="portfolio" pour associer la zone html avec l'ancre dans le menu -->
+        <section id="portfolio" class="container my-4">
+            <div class="text-center">
+                <!-- js-btn-filter permettra par la suite de rajouter un effet en javascript  -->
+                <button class="btn btn-success btn-sm js-btn-filter">Tous les projets</button>
+                <button class="btn btn-secondary btn-sm js-btn-filter">WebDesign</button>
+                <button class="btn btn-secondary btn-sm js-btn-filter">UI UX</button>
+                <button class="btn btn-secondary btn-sm js-btn-filter">Illustration</button>
+                <button class="btn btn-secondary btn-sm js-btn-filter">Motion Design</button>
+            </div>
+            <div class="grille mt-4">
+                <img src="https://placehold.co/400x200" alt="" class="rounded grille-img1">
+                <img src="https://placehold.co/400x200" alt="" class="grille-img2 rounded">
+                <img src="https://placehold.co/400x200" alt="" class="grille-img3 rounded">
+                <img src="https://placehold.co/400x200" alt="" class="grille-img4 rounded">
+            </div>
+
+
+        </section>
+        <section id="about">
+
+        </section>
+        <section id="contact">
+
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
