@@ -22,8 +22,6 @@ CREATE TABLE IF NOT EXISTS commentaire(
 --     deuxieme () => valeurs 
 INSERT INTO commentaire () VALUES ()
 
-
-
 INSERT INTO commentaire
 ( email , message )
 VALUES 
@@ -103,7 +101,7 @@ VALUES
 
 INSERT INTO exo1 
 (
-   nom , description ,date_publication ,   date_mis_jour
+   nom , description ,date_publication ,   date_mis_jour 
 )
 VALUES 
 (
@@ -114,4 +112,111 @@ VALUES
 --- si je veux modifier la valeur dans le champ nom de la table exo1 ayant l'id 
 
 
-UPDATE exo1 SET nom = 'exo3' WHERE id = 3 ;
+UPDATE exo1 SET nom = 'exo3' WHERE id = 3 OR id = 2;
+
+UPDATE exo1 SET nom = 'exo3' WHERE id > 1;
+
+UPDATE exo1 SET nom = 'exo3' WHERE id IN (2,4,50, 1000) ;
+UPDATE exo1 SET nom = 'exo3' WHERE id BETWEEN 3 AND 10  ;
+
+
+
+---
+
+-- Creer des tables CREATE TABLE 
+
+-- Enregistrement
+-- CREATE => INSERT INTO nom_table () VALUES () 
+-- UPDATE => UPDATE nom_table SET nom_colonne = 'valeur' WHERE id = 1
+-- DELETE => DELETE FROM nom_table WHERE id = 1 
+
+-- SELECT => dernière opération de base sur une table 
+-- permet de récupérer une ou plusieurs valeurs 
+
+SELECT * FROM exo1 ; 
+
+-- récupérer toutes les lignes et toutes les colonnes de la table exo1
+
+SELECT nom , description , date_mis_jour 
+FROM exo1 ;
+
+-- il est possible de récupérer certaines colonnes 
+
+
+SELECT nom AS `titre publication` , description , date_mis_jour AS `updated at`
+FROM exo1 ;
+
+-- AS ne modifie pas le nom de la colonne dans la table exo1 elle va juste être affichée lorsque vous avez réalisé le SELECT
+
+
+SELECT nom AS `titre publication` , description , date_mis_jour AS `updated at`
+FROM exo1 ;
+
+
+-- vous pouvez effectuer des calculs 
+-- dans un select  => concatenation 
+
+SELECT nom || ' publié sur l id ' || id AS `description article`
+FROM exo1 ;
+
+
+SELECT nom , strftime("%d/%m/%Y" , date_mis_jour )
+FROM exo1 ;
+
+-- il est possible de filtrer des résultats (ne pas avoir toutes les lignes)
+
+SELECT * 
+FROM exo1 
+WHERE id = 1 ;
+
+-- récupére moi toutes les colonnes dont l'id a pour valeur le chiffre 1
+
+
+SELECT * 
+FROM exo1 
+WHERE id = 1 OR id = 2 ;
+
+
+SELECT * 
+FROM exo1 
+WHERE id IN ( 1, 2 ) ; 
+
+
+----
+
+CREATE TABLE exo3 (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(100),
+    email VARCHAR(150) NOT NULL,
+    age INT,
+    is_admin BOOLEAN
+);
+
+
+INSERT INTO exo3 (name, email, age, is_admin) VALUES
+('Alice Martin', 'alice.martin@example.com', 25, 0),
+('Bob Dupont', 'bob.dupont@example.com', 32, 0),
+('Charlie Leroy', 'charlie.leroy@example.com', 41, 1),
+('Diana Petit', 'diana.petit@example.com', 29, 0),
+('Ethan Moreau', 'ethan.moreau@example.com', 35, 0),
+('Fatima Benali', 'fatima.benali@example.com', 28, 0),
+('George Smith', 'george.smith@example.com', 45, 1),
+('Hannah Brown', 'hannah.brown@example.com', 22, 0),
+('Ivan Ivanov', 'ivan.ivanov@example.com', 38, 0),
+('Julia Rossi', 'julia.rossi@example.com', 31, 0),
+('Kevin Nguyen', 'kevin.nguyen@example.com', 27, 0),
+('Laura Garcia', 'laura.garcia@example.com', 34, 1),
+('Mohamed Ali', 'mohamed.ali@example.com', 40, 0),
+('Nina Schmidt', 'nina.schmidt@example.com', 26, 0),
+('Oscar Lopez', 'oscar.lopez@example.com', 36, 0),
+('Paula Silva', 'paula.silva@example.com', 24, 0),
+('Quentin Dubois', 'quentin.dubois@example.com', 33, 0),
+('Rania Haddad', 'rania.haddad@example.com', 29, 0),
+('Samuel Cohen', 'samuel.cohen@example.com', 42, 1),
+('Yasmine Noor', 'yasmine.noor@example.com', 21, 0);
+
+
+Pouvez vous me donner donner le nom de tous les étudiants qui ont le rôle admin ?
+pouvez vous me donner le  nom et l'email de tous les étudiants qui ont plus de 30 ans
+pouvez vous me donner le  nom et l'email de tous les étudiants qui ontentre 20 et 40 ans
+pouvez vous me donner le  nom et l'email de tous les étudiants qui ont entre 20 et 40 ans ET qui sont admin ? 
