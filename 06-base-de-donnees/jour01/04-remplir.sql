@@ -184,7 +184,7 @@ WHERE id IN ( 1, 2 ) ;
 
 ----
 
-CREATE TABLE exo3 (
+CREATE TABLE IF NOT EXISTS exo3 (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(100),
     email VARCHAR(150) NOT NULL,
@@ -193,7 +193,10 @@ CREATE TABLE exo3 (
 );
 
 
-INSERT INTO exo3 (name, email, age, is_admin) VALUES
+INSERT INTO exo3 
+
+(name, email, age, is_admin) 
+VALUES
 ('Alice Martin', 'alice.martin@example.com', 25, 0),
 ('Bob Dupont', 'bob.dupont@example.com', 32, 0),
 ('Charlie Leroy', 'charlie.leroy@example.com', 41, 1),
@@ -217,6 +220,67 @@ INSERT INTO exo3 (name, email, age, is_admin) VALUES
 
 
 Pouvez vous me donner donner le nom de tous les étudiants qui ont le rôle admin ?
+
+SELECT name FROM exo3 WHERE is_admin = TRUE ;
+
+
 pouvez vous me donner le  nom et l'email de tous les étudiants qui ont plus de 30 ans
+
+SELECT name , email FROM exo3 WHERE age >=30  ;
+
 pouvez vous me donner le  nom et l'email de tous les étudiants qui ontentre 20 et 40 ans
-pouvez vous me donner le  nom et l'email de tous les étudiants qui ont entre 20 et 40 ans ET qui sont admin ? 
+
+SELECT name , email FROM exo3 WHERE age >= 20 AND age <= 40
+SELECT name , email FROM exo3 WHERE age BETWEEN 20 AND 40
+
+- pouvez vous me donner le  nom et l'email de tous les étudiants qui ont entre 20 et 40 ans ET qui sont admin ? 
+
+
+SELECT name , email FROM exo3 WHERE age >= 20 AND age <= 40 AND is_admin = TRUE
+
+
+- je veux récupérer tous les étudiants dont le name commence par lettre a 
+
+
+SELECT * FROM exo3 WHERE name LIKE 'A%'
+
+SELECT * FROM exo3 WHERE name LIKE '%s'
+
+-- tous les étudiants dont le name contient le texte ma 
+
+SELECT * FROM exo3 WHERE name LIKE '%ma%' 
+
+-- tous les étudiants dont le name ne contient pas les lettres ma 
+
+SELECT * FROM exo3 WHERE name NOT LIKE '%ma%'
+
+-- afficher tous les étudiants / toutes les colonnes mais je veux que les valeurs soient triées par age croissant (jeune => ancien)
+
+SELECT * FROM exo3 ORDER BY age ASC
+
+-- afficher tous les étudiants / toutes les colonnes mais je veux que les valeurs soient triées par age décroissant (ancien => jeune)
+
+SELECT * FROM exo3 ORDER BY age DESC
+
+
+SELECT * FROM exo3 
+WHERE age > 30 
+ORDER BY age DESC
+
+
+tout l'intérêt de bases de données au delà créer un méthode commune pour gérer les données 
+en + c'est le fait de pouvoir créer des relations entre les tables 
+
+
+=> demandé à la base de données 
+
+table article 
+- id PK
+- titre 
+- description 
+
+table commentaire 
+- id PK
+- email
+- message 
+- article_id => clé étrangère (liaison entre la table commentaire ET la table article) 
