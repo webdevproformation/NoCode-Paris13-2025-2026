@@ -284,3 +284,16 @@ table commentaire
 - email
 - message 
 - article_id => clé étrangère (liaison entre la table commentaire ET la table article) 
+
+
+Relations :
+- OneToMany ManytoOne
+- ManyToMany
+- OneToOne 
+
+
+
+- JOINTURE 
+
+
+

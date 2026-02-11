@@ -1,15 +1,16 @@
 # Base de données 
 
 - support de cours 
-- url : https://formation.webdevpro.net/sgbd
-- login :
-- password : 
+- https://formation.webdevpro.net/sgbd/
+- login : sgbd
+- password : sgbd
 
 
 
 - support de cours 
-- url : https://formation.webdevpro.net/python-initiation
-- pas de login / pas de mot de passe 
+- https://formation.webdevpro.net/python-initiation/
+- login : python
+- password : python
 
 
 ## intro 
