@@ -20,3 +20,5 @@ reponse = requests.get(
 print(reponse.content)
 
 ## exécuter mon code il faut se positionner dans le dossier qui contient le fichier que vous êtes entrain de regarder
+
+
