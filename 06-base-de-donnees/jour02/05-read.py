@@ -1,4 +1,3 @@
-
 # requête HTTP 
 # requête ajax 
 # demande à la base de données de lui retourner une ligne
