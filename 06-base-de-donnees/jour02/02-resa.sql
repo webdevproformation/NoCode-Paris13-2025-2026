@@ -96,10 +96,10 @@ JS 200  est suivi par Alain
 
 
 CREATE TABLE IF NOT EXISTS etudiant(
-     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT ,
-     prenom VARCHAR(200) NOT NULL ,
-     nom VARCHAR(200) NOT NULL ,
-     dt_naissance DATE NOT NULL ,
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT ,
+    prenom VARCHAR(200) NOT NULL ,
+    nom VARCHAR(200) NOT NULL ,
+    dt_naissance DATE NOT NULL ,
     email VARCHAR(200) NOT NULL 
 );
 
