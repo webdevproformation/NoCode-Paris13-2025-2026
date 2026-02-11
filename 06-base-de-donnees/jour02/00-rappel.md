@@ -114,3 +114,4 @@ pour sqlite / mySQL
 ```sql
 DELETE FROM nom_table WHERE id = 1 
 ```
+
