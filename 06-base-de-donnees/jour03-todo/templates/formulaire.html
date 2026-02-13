@@ -11,6 +11,7 @@
         <h1>Ajouter une nouvelle Todo</h1>
         <form method="POST">
             <input type="text" name="name" class="form-control" placeholder="saisir le nom de la tâche">
+            <input type="hidden" value="{{token}}">
             <div>
                 <input type="submit" class="btn btn-success" value="Envoyer !">
             </div>

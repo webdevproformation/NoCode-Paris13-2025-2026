@@ -30,13 +30,19 @@ def contact():
 @app.route("/new" , methods=["GET", "POST"])
 def new():
     if request.method == "POST" :
-        todo = request.form.get("name") # récupérer la valeur saisie dans le formulaire
+        todo = request.form.get("name") # récupérer la valeur saisie 
+        token = request.form.get("token")
+
+
+        # dans le formulaire
 
         add_todo( todo ) # appeler l'API de baserow
         
         return redirect(url_for('home'))  # redirigé vers la page d'accueil
+    
+    token = "eofiheoruhze"
 
-    return render_template("formulaire.html")
+    return render_template("formulaire.html" , token=token)
     
 
 # flask run --debug # démarrer votre serveur de développement
