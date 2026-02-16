@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+
+        // ici 
+        const a = 2
+        // ....
+
+     </script>
+</head>
+<body>
+    <!-- <img src="" onerror="alert('tutu')" alt=""> -->
+    <script src="script.js"></script><!-- utiliser le fichir script.js qui est dans le même dossier -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- utiliser un fichier js externe MAIS qui est stocké sur un CDN -->
+     <form action="https://virus.com/script.py" method="POST" ></form>
+
+     <script>
+
+        const code = 'const a = 2 ; console.log(a)'
+
+        eval(code)
+
+     </script>
+
+     <div>
+        <input type="text" class="js-result">
+        <button class="js-btn">1</button>
+        <button class="js-btn">2</button>
+        <button class="js-btn">3</button>
+        <hr>
+        <button class="js-btn">+</button>
+        <button class="js-btn">-</button>
+        <button class="js-egal">=</button>
+     </div>
+     <script>
+        document.querySelectorAll(".js-btn").forEach(function(btn){
+            btn.addEventListener("click", function(){
+               document.querySelector(".js-result").value += btn.textContent
+            })
+        })
+
+        document.querySelector(".js-egal").addEventListener("click", function(){
+            const calcul = document.querySelector(".js-result").value;
+            console.log(eval(calcul)) // 1+2+3
+            document.querySelector(".js-result").value =  eval(calcul)
+        })
+
+     </script>
+
+</body>
+</html>
