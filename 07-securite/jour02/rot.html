@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const alphabet = ["a" , "b" , "c" , "d" , "e" , "f" , "g" , "h" , "i" , "j", "k" , "l" , "m" , "n" , "o" , "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "y" , "z"]; 
+
+
+        const mot = "success" ;
+        let rot13Mot= ""
+
+        for(let i = 0 ; i < mot.length ; i++){
+            const lettre = mot[i];
+            console.log(lettre)
+            const position = alphabet.findIndex(function(item ){ return item === lettre})
+           let newposition = position + 13
+           if(newposition > 26){
+            newposition -= 26
+           }
+           console.log(alphabet[newposition])
+           rot13Mot += alphabet[newposition];
+        }
+        console.log(rot13Mot)
+
+        // 38581812b435834ebf84ebcc2c6424d6
+
+    </script>
+</body>
+</html>
