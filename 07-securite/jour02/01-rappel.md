@@ -52,4 +52,15 @@ Mais l'attaquant va saisir un chiffre + du code à injecter
     - vous vérifiez peu ou pas le contenu téléchargé 
     - l'attaque pas gentil va télécharger un fichier php qui contient un code que l'on peut appeler une backdoor 
 
+---
+
+CTF => Capture The Flag
+
+
+# nouveau lien pour accéder au site DVWA 
+
+<https://8a34-109-190-31-225.ngrok-free.app>
+
+
+
 - injection Javascript => XSS 
