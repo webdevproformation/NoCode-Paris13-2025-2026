@@ -37,9 +37,19 @@ Mais l'attaquant va saisir un chiffre + du code à injecter
     - 
     - `SELECT * FROM users WHERE nom = 'Alain'`
 
+    - INJECTION SQL 
+
     - `Alain' #`
+    - 
+    - `SELECT * FROM users WHERE nom = 'Alain'  #'`
+    - 
+    - `Alain' OR 1 = 1 #`
+    - `Alain' UNION SELECT login , passward FROM users #`
 
 
 - injection de fichier 
+    - formulaire qui permet de télécharger des fichiers => pdf / image 
+    - vous vérifiez peu ou pas le contenu téléchargé 
+    - l'attaque pas gentil va télécharger un fichier php qui contient un code que l'on peut appeler une backdoor 
 
 - injection Javascript => XSS 
