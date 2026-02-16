@@ -18,3 +18,31 @@ si le formulaire est soumis => ce token va être comparé et dévra être égal 
 
 
 <https://04b2-212-39-129-107.ngrok-free.app>
+
+INJECTIOn SQL 
+
+admin' OR 1=1 --
+
+odezhbozeubh
+
+INJECTION XSS  dans le champ de recherche 
+
+apple <img src="" onerror="alert('coucou')">
+
+
+
+
+<h1 onload="(function(){ alert('coucou') })()">apple</h1>
+
+function bonjour(){
+}
+
+bonjour()
+
+(function(){
+....
+})()
+
+
+
+< https://1ec4-212-39-129-107.ngrok-free.app>
