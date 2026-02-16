@@ -1,0 +1,6 @@
+
+clé du site
+6LcZn20sAAAAALOYM2SIEvTqVNXFyJdm8TFu-Svd
+
+clé secrète
+6LcZn20sAAAAAIGU2tYgeCwXMY-BiqhB90WzVTOm
