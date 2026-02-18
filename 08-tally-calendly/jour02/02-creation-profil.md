@@ -9,6 +9,8 @@
 
 # modifier les valeurs par défaut dans notre profil  
 
+---
+
 # cas pratique 
 
 vous êtes un consultant en SEO et vous voulez proposer des réunions de conseil à vos clients 
