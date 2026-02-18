@@ -42,6 +42,8 @@ pip freeze > requirements.txt
 
 # lancer le serveur de développement de flask
 flask run --debug
+
+cd ..
 ```
 
 
@@ -103,4 +105,28 @@ def dashboard():
 ```
 
 
+
+
+cmd / terminal / invite de commande / shell 
+
+```txt
+windows 
+
+- cmd         dir / cls   / python app.py => PATH 
+- powershell  dir / cls   / python        => PATH 
+- sh          ls  / clear / python3
+
+
+C:/Users/harri/AppData/Local/Python/pythoncore-3.14-64/python.exe c:/Users/harri/Desktop/html/08-tally-calendly/jour02/04-exemple.py
+bonjour
+
+
+flask run --debug 
+logiciel 
+run action 
+--debug flag / option 
+
+
+python -m venv .venv
+```
 

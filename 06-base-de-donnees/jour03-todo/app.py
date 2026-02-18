@@ -2,7 +2,7 @@ from flask import Flask , render_template , request, redirect , url_for
 # import depuis la librairie flask que l'on a téléchargé 
 # la class Flask 
 
-from api.client import get_all_todo , add_todo
+from api.client import get_all_todo , add_todo , delete_todo
 
 app = Flask( __name__ )
 # créer mon site internet qui va être stocké dans une variable qui s'appelle app 
@@ -31,7 +31,7 @@ def contact():
 def new():
     if request.method == "POST" :
         todo = request.form.get("name") # récupérer la valeur saisie 
-        token = request.form.get("token")
+        # token = request.form.get("token")
 
 
         # dans le formulaire
@@ -42,8 +42,20 @@ def new():
     
     token = "eofiheoruhze"
 
-    return render_template("formulaire.html" , token=token)
+    return render_template("formulaire.html" , title="Ajouter un Todo")
     
+
+@app.route("/delete/<todo_id>")
+def delete(todo_id):
+    delete_todo(todo_id)
+    return redirect(url_for('home'))
+
+
+@app.route("/update/<todo_id>")
+def update(todo_id):
+    
+    return render_template("formulaire.html" , title="Modifier un Todo")
+
 
 # flask run --debug # démarrer votre serveur de développement
 # http://127.0.0.1:5000
