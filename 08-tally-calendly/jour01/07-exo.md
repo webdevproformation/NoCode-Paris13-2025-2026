@@ -60,7 +60,7 @@ Selon le **poste sélectionné** :
 ### 3️⃣ Centraliser les candidatures dans Google Sheets
 
 À l’aide de **Zapier**, chaque nouvelle candidature doit :
-- créer une **nouvelle ligne** dans un Google Sheets,
+- créer une **nouvelle ligne** dans un Google Sheets, 
 - inclure :
   - identité du candidat,
   - poste visé,
