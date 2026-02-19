@@ -1,4 +1,4 @@
-function confirm_delete(e)
+export function confirm_delete(e)
 {
     e.addEventListener("click", function(event){
         event.preventDefault();
@@ -9,6 +9,5 @@ function confirm_delete(e)
         //return confirm("Etes vous sur de vouloir supprimer ce Todo ?")
     });
 }
-
 
 document.querySelectorAll(".js-delete").forEach(confirm_delete)

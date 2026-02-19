@@ -13,8 +13,8 @@
 - Créer des Todos => formulaire 
 
 
+- [x] ajouter du css et js
 - [] Update  20% il reste 80% à finir
-- [] ajouter du css
 - [] mettre en ligne sur un hébergeur => AWS 
 
 
@@ -41,3 +41,17 @@ body{
 Maintenant je peux tester 
 
 1. http://127.0.0.1:5000 
+
+---
+
+#  Update  20% il reste 80% à finir
+
+- lorsque je clique sur le bouton modifier => formulaire 
+- remplir le formulaire avec des données stockées dans la table Todo 
+    - [x] SELECT * FROM todo WHERE id = 173
+    - [] remplir le formulaire 
+        - => envoyer les données vers le formulaire
+        - et les afficher
+- l'utilisateur va réaliser des modifications dans le formulaire
+    - lorsque l'on soumet 
+    - UPDATE todo SET name="...." , completed = "True" WHERE id = 173 

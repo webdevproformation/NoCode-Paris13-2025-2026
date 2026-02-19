@@ -34,3 +34,14 @@ def delete_todo(todo_id):
             "Authorization": "Token jozQdkmfa0YIvJrhQqADDAgrkR9q0vFm"
         }
     )
+
+def get_todo_by_id( todo_id ):
+    reponse = requests.get(
+        f"https://api.baserow.io/api/database/rows/table/836138/{todo_id}/?user_field_names=true",
+        headers={
+            "Authorization": "Token jozQdkmfa0YIvJrhQqADDAgrkR9q0vFm"
+        }
+    )
+    # le requête API retourne un objet qui contient une clé results qui contient les valeurs du todo
+    # print(reponse.json())
+    return reponse.json().get("results")  

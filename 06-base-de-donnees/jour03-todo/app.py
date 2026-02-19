@@ -2,7 +2,7 @@ from flask import Flask , render_template , request, redirect , url_for
 # import depuis la librairie flask que l'on a téléchargé 
 # la class Flask 
 
-from api.client import get_all_todo , add_todo , delete_todo
+from api.client import get_all_todo , add_todo , delete_todo , get_todo_by_id
 
 app = Flask( __name__ )
 # créer mon site internet qui va être stocké dans une variable qui s'appelle app 
@@ -53,8 +53,10 @@ def delete(todo_id):
 
 @app.route("/update/<todo_id>")
 def update(todo_id):
+
+    todo = get_todo_by_id(todo_id)
     
-    return render_template("formulaire.html" , title="Modifier un Todo")
+    return render_template("formulaire.html" , title="Modifier un Todo", todo=todo)
 
 
 # flask run --debug # démarrer votre serveur de développement

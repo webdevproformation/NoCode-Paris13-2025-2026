@@ -3,9 +3,21 @@
 {% block contenu %}
     <h1>{{ title }}</h1>
     <form method="POST">
-        <input type="text" name="name" class="form-control" placeholder="saisir le nom de la tâche">
 
-        <input type="checkbox" name="completed" class="form-check-input" id="completed">
+        <input 
+            type="text" 
+            name="name" 
+            class="form-control" 
+            placeholder="saisir le nom de la tâche"
+            value="{{ todo.name if todo else '' }}">
+
+        <input 
+            type="checkbox" 
+            name="completed" 
+            class="form-check-input" 
+            id="completed"
+            {{ todo.c }}
+            >
         <label for="completed">
             Est ce que la tâche est finie ?
         </label>
