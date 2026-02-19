@@ -118,3 +118,9 @@ il faut préparer notre code
     1. qui doit s'appeler `.ebextensions`
     1. qui contient un fichier `app.config` 
     1. contient le texte suivant (attention aux indentations)
+
+```yml
+option_settings:
+  "aws:elasticbeanstalk:container:python":
+    WSGIPath: application:application
+```
