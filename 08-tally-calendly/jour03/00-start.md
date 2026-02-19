@@ -15,7 +15,7 @@
 
 - [x] ajouter du css et js
 - [x] Update  20% il reste 80% à finir
-- [] mettre en ligne sur un hébergeur => AWS et Elastic Beanstalk
+- [x] mettre en ligne sur un hébergeur => AWS et Elastic Beanstalk
 
 
 # ajouter du css dans un projet Python Flask
@@ -124,3 +124,25 @@ option_settings:
   "aws:elasticbeanstalk:container:python":
     WSGIPath: application:application
 ```
+
+prendre les dossiers / fichiers => mettre dans un zip 
+
+.ebextensions/
+api/
+static/
+templates/
+application.py
+requirements.txt
+
+---
+
+# créer un profil sur AWS
+
+- <https://aws.amazon.com/fr>
+- une fois le profil créé => la console => page d'accueil du AWS 
+
+- rdv 14h51 
+
+---
+
+# créer la machine / serveur Elastic Beanstalk
