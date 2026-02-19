@@ -111,3 +111,10 @@ société qui vont louer des serveurs => hébergeurs
 il faut préparer notre code 
 
 1. renommer le fichier `app.py` en `application.py`
+2. dans le fichier `application.py` vous devez renommer 
+    1. la variable app => application
+    1. pour chaque route @app.route() => @application.route()  
+3. créer un dossier  à la racine 
+    1. qui doit s'appeler `.ebextensions`
+    1. qui contient un fichier `app.config` 
+    1. contient le texte suivant (attention aux indentations)
