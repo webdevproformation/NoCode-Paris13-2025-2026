@@ -2,7 +2,7 @@ from flask import Flask , render_template , request, redirect , url_for
 # import depuis la librairie flask que l'on a téléchargé 
 # la class Flask 
 
-from api.client import get_all_todo , add_todo , delete_todo , get_todo_by_id
+from api.client import get_all_todo , add_todo , delete_todo , get_todo_by_id, update_todo_by_id
 
 app = Flask( __name__ )
 # créer mon site internet qui va être stocké dans une variable qui s'appelle app 
@@ -51,10 +51,21 @@ def delete(todo_id):
     return redirect(url_for('home'))
 
 
-@app.route("/update/<todo_id>")
+@app.route("/update/<todo_id>", methods=["GET", "POST"])
 def update(todo_id):
 
     todo = get_todo_by_id(todo_id)
+
+    if request.method == "POST":
+        # récupérer les valeurs saisies 
+        name = request.form.get("name")
+        completed = True if request.form.get("completed") == 'on' else False
+
+        # faire l'update
+        update_todo_by_id(name , completed , todo_id)
+
+        return redirect(url_for('home'))
+
     
     return render_template("formulaire.html" , title="Modifier un Todo", todo=todo)
 

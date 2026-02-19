@@ -44,4 +44,17 @@ def get_todo_by_id( todo_id ):
     )
     # le requête API retourne un objet qui contient une clé results qui contient les valeurs du todo
     # print(reponse.json())
-    return reponse.json().get("results")  
+    return reponse.json()
+
+def update_todo_by_id( name, completed , todo_id ):
+    requests.patch(
+        f"https://api.baserow.io/api/database/rows/table/836138/{todo_id}/?user_field_names=true",
+        headers={
+            "Authorization": "Token jozQdkmfa0YIvJrhQqADDAgrkR9q0vFm",
+            "Content-Type": "application/json"
+        },
+        json={
+            "name": name,
+            "completed": completed
+        }
+    )

@@ -16,7 +16,7 @@
             name="completed" 
             class="form-check-input" 
             id="completed"
-            {{ todo.c }}
+            {% if todo and todo.completed %}checked{% endif %}
             >
         <label for="completed">
             Est ce que la tâche est finie ?
