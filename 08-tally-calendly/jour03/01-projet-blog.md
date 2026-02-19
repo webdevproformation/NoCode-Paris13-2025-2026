@@ -120,3 +120,50 @@ les admin du site peuvent
     - gérer les articles : créer / modifier / supprimer
     - gérer les catégories : créer / modifier / supprimer 
     - gérer les profils admins : créer / modifier / supprimer  
+
+
+# Cas pratique
+
+1. créer un nouveau workspace dans baserow (blog)
+2. créer une nouvelle base de données blog
+3. créer 3 tables articles / catégories / users 
+
+```txt
+articles 
+
+id clé primaire
+titre 
+contenu
+slug 
+meta
+dt-publication
+image
+categorie_id
+published 
+
+---
+
+categories
+
+id clé primaire
+label
+description
+
+---
+
+users
+
+id  clé primaire
+email
+pseudo
+password
+role
+dt-creation
+
+---
+
+relations
+
+un article ne peut être associé qu'à une seule catégorie
+un catégorie peut être associée à 1 ou plusieurs articles
+```
