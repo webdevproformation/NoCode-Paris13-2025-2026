@@ -14,8 +14,8 @@
 
 
 - [x] ajouter du css et js
-- [] Update  20% il reste 80% à finir
-- [] mettre en ligne sur un hébergeur => AWS 
+- [x] Update  20% il reste 80% à finir
+- [] mettre en ligne sur un hébergeur => AWS et Elastic Beanstalk
 
 
 # ajouter du css dans un projet Python Flask
@@ -34,6 +34,7 @@ body{
     background: grey;
 }
 ```
+
 1. dans le fichier `base.html` dans le dossier templates, il faut ajouter avant la balise `</head>` => 
 1.  `<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">`
 
@@ -69,3 +70,44 @@ Maintenant je peux tester
     - lorsque l'on soumet 
     - on fait un POST => il faut l'ajouter dans la route methods=["GET", "POST"]
     - UPDATE todo SET name="...." , completed = "True" WHERE id = 173 
+
+
+# Objectif atteint MAIS
+
+- très très gros problème de sécurité 
+- token => diffusé sur github 
+- plein de formulaire MAIS aucune vérification avant de lancer le traitement en base de données
+- il reste plein de code à ajouter en + pour le projet soit fonctionnel ET sécure 
+
+
+# Déploiement
+
+lorsque votre projet est prêt en local (dans votre ordinateur)
+le mettre sur internet 
+copier votre code => coller sur un ordinateur qui a pour rôle de 
+    - fonctionner 24h sur 24h / 7jours /7
+    - répondre lorsque on l'appelle via une adresse internet 
+    - ordinateur => SERVEUR 
+
+société qui vont louer des serveurs => hébergeurs 
+
+    - OVH (société leader en france qui propose des serveurs)
+    - <https://www.ovhcloud.com/fr/>
+    - 
+    - <https://www.nuxit.com/pack-etudiant/>
+
+    - AWS (Amazon Web Service) => hébergement et en plus système qui permet 
+        - de créer autant de serveur que vous avez besoin 
+        - préinstaller des logiciels dans ces machines 
+        - xxxx 
+        - 
+
+# Elastic Beanstalk
+ 
+<https://aws.amazon.com/fr/elasticbeanstalk>
+
+# avant de lancer la migration 
+
+il faut préparer notre code 
+
+1. renommer le fichier `app.py` en `application.py`

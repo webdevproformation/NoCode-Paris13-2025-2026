@@ -4,13 +4,13 @@ from flask import Flask , render_template , request, redirect , url_for
 
 from api.client import get_all_todo , add_todo , delete_todo , get_todo_by_id, update_todo_by_id
 
-app = Flask( __name__ )
+application = Flask( __name__ )
 # créer mon site internet qui va être stocké dans une variable qui s'appelle app 
 
 # dans mon site internet je vais avoir une première page qui sera accessible depuis l'adresse / l'adresse de la page d'accueil
 # si un utilisateur appele l'adresse / => Flask va exécuter la fonction home qui va retourner le texte "page d'accueil"
 
-@app.route("/")
+@application.route("/")
 def home():
 
     fleurs = ["jasmin", "tulipe", 'lilas']
@@ -22,12 +22,12 @@ def home():
     return render_template("index.html" , fleurs=fleurs , etudiants=etudiants , todos=todos)
 
 
-@app.route("/contact")
+@application.route("/contact")
 def contact():
     return render_template("contact.html")
 
 
-@app.route("/new" , methods=["GET", "POST"])
+@application.route("/new" , methods=["GET", "POST"])
 def new():
     if request.method == "POST" :
         todo = request.form.get("name") # récupérer la valeur saisie 
@@ -45,13 +45,13 @@ def new():
     return render_template("formulaire.html" , title="Ajouter un Todo")
     
 
-@app.route("/delete/<todo_id>")
+@application.route("/delete/<todo_id>")
 def delete(todo_id):
     delete_todo(todo_id)
     return redirect(url_for('home'))
 
 
-@app.route("/update/<todo_id>", methods=["GET", "POST"])
+@application.route("/update/<todo_id>", methods=["GET", "POST"])
 def update(todo_id):
 
     todo = get_todo_by_id(todo_id)
