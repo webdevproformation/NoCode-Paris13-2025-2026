@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block contenu %}
-        <h1>Bienvenue sur mon site !! </h1>
+        <h1 class="title-animation">Bienvenue sur mon site !! </h1>
 
         {% for fleur in fleurs  %}
         <p>{{ fleur }}</p>
@@ -32,7 +32,7 @@
                         <td>{{todo['completed']}}</td>
                         <td>
                             <a href="{{ url_for('update', todo_id=todo['id']) }}" class="btn btn-warning me-3">modifier</a>
-                            <a href="{{ url_for( 'delete' , todo_id=todo['id'] ) }}" class="btn btn-danger">supprimer</a>
+                            <a href="{{ url_for( 'delete' , todo_id=todo['id'] ) }}" class="btn btn-danger js-delete">supprimer</a>
                         </td>
                     </tr>
                 {% endfor %}

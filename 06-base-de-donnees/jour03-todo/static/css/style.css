@@ -1,0 +1,11 @@
+.title-animation{
+    opacity: 0;
+    animation: show 0.7s forwards;
+}
+
+@keyframes show {
+    100%{
+        opacity: 1;
+    }
+}
+
