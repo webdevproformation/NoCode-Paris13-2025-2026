@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}se créer un profil{% endblock %}
+
+{% block meta %}Créer un profil pour pouvoir gérer le contenu du blog {% endblock %}
+
+{% block contenu %}
+
+<h1>Formulaire d'inscription</h1>
+
+<form method="POST" class="row">
+    <div class="col-md-4 offset-md-4 mb-3">
+        <label for="pseudo" class="mb-2">Votre Pseudo</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            placeholder="votre pseudo" 
+            id="pseudo" 
+            name="pseudo">
+    </div>
+    <div class="col-md-4 offset-md-4 mb-3">
+        <label for="email" class="mb-2">Votre Email</label>
+        <input 
+            type="email" 
+            class="form-control" 
+            placeholder="votre email" 
+            id="email" 
+            name="email">
+    </div>
+    <div class="col-md-4 offset-md-4 mb-3">
+        <label for="password" class="mb-2">Votre Password</label>
+        <input 
+            type="password" 
+            class="form-control" 
+            placeholder="votre password" 
+            id="password" 
+            name="password">
+    </div>
+    <div class="text-center">
+        <input type="submit" class="btn btn-success" value="créer votre profil">
+    </div>
+</form>
+
+{% endblock %}
