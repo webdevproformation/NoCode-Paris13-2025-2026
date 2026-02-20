@@ -41,12 +41,12 @@ flask --app app run --debug
 flask --app application run --debug 
 ```
 
-    - zipper notre projet 
-        - .ebextensions/
-        - api/
-        - templates/
-        - static/
-        - application.py
-        - requirements.txt
+- zipper notre projet 
+    - .ebextensions/
+    - api/
+    - templates/
+    - static/
+    - application.py
+    - requirements.txt
 
 - créer un serveur Elastic Beanstalk et migration du fichier zip 
