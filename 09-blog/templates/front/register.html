@@ -6,36 +6,28 @@
 
 {% block contenu %}
 
+{% for error in form.errors %}
+<div class="alert bg-danger">
+    {{ error }}
+</div>
+{% endfor%}
+
 <h1>Formulaire d'inscription</h1>
 
 <form method="POST" class="row">
     <div class="col-md-4 offset-md-4 mb-3">
-        <label for="pseudo" class="mb-2">Votre Pseudo</label>
-        <input 
-            type="text" 
-            class="form-control" 
-            placeholder="votre pseudo" 
-            id="pseudo" 
-            name="pseudo">
+        {{ form.pseudo.label( class_="mb-2") }}
+        {{ form.pseudo(class_="form-control" , placeholder="votre pseudo") }}
     </div>
     <div class="col-md-4 offset-md-4 mb-3">
-        <label for="email" class="mb-2">Votre Email</label>
-        <input 
-            type="email" 
-            class="form-control" 
-            placeholder="votre email" 
-            id="email" 
-            name="email">
+        {{ form.email.label( class_="mb-2") }}
+        {{ form.email(class_="form-control" , placeholder="votre email") }}
     </div>
     <div class="col-md-4 offset-md-4 mb-3">
-        <label for="password" class="mb-2">Votre Password</label>
-        <input 
-            type="password" 
-            class="form-control" 
-            placeholder="votre password" 
-            id="password" 
-            name="password">
+        {{ form.password.label( class_="mb-2") }}
+        {{ form.password(class_="form-control" , placeholder="votre password") }}
     </div>
+    {{ form.csrf_token  }}
     <div class="text-center">
         <input type="submit" class="btn btn-success" value="créer votre profil">
     </div>
