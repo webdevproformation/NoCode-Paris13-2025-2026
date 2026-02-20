@@ -128,6 +128,49 @@ les admin du site peuvent
 2. créer une nouvelle base de données blog
 3. créer 3 tables articles / catégories / users 
 
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop HealthCheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+```
+
+```mermaid
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+excludes weekdays 2014-01-10
+
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2              :         des4, after des3, 5d
+
+```
+
+```mermaid
+    gitGraph
+       commit
+       commit
+       branch develop
+       commit
+       commit
+       commit
+       checkout main
+       commit
+       commit
+```
+
+
 ```txt
 articles 
 

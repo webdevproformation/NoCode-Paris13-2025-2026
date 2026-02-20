@@ -73,3 +73,6 @@ def update(todo_id):
 # flask run --debug # démarrer votre serveur de développement
 # http://127.0.0.1:5000
 # http://127.0.0.1:5000/contact
+
+if __name__ == '__main__':
+    application.run(debug=True)
