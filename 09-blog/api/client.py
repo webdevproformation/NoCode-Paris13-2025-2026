@@ -1,12 +1,18 @@
 import requests 
 
+from baserowapi import Baserow, Filter
 
 def find_user_by_email( email ):
     # SELECT * FROM users WHERE email = email
-    reponse = requests.get(
-        f"https://api.baserow.io/api/database/rows/table/849395/?user_field_names=true&search=email={email}",
-        headers={
-            "Authorization": "Token xxxxxxxxxxxxxxxxxx"
-        }
-    )
-    return reponse.json().get("results")
+
+    
+
+    table = baserow.get_table(849395)
+
+    where = Filter("email", email)
+
+    result = table.get_rows(filters=[where])
+
+    return result
+
+    
