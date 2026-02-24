@@ -150,3 +150,35 @@ first() => premier élement d'un tableau
 distinct() => enlève les doublons d'un tableau 
 ["jasmin" , "rose" , "tulipe" ]
 
+
+Dans Google Sheet
+
+créer une nouvelle feuille dans le fichier make qui s'appelle exo
+dans cette feuille vous allez créer un tableau qui contient les valeurs suivantes
+
+nom            |   email    |    adresse       |  age
+
+Alain  Doe        a@y.fr      75 rue de Paris    30
+Céline Pierre     c@y.fr      22 rue du Louvre   44
+Zorro  DUPONT     a@y.fr      42 rue de Lyon     12
+
+dans Make récupérer ces valeurs via le module Search Google Sheet
+
+effectuer les traitements suivants 
+
+
+nom            |   email    |  num  |   adresse       |  annee de naissance
+
+Alain  DOE        a@y.fr      75    | rue de Paris       maintenant - 30 ans
+Céline PIERRE     c@y.fr      22    | rue du Louvre      maintenant - 44 ans
+Zorro  DUPONT     a@y.fr      42    | rue de Lyon        maintenant - 12 ans
+ 
+
+get(split( nom ; {{space}} ) ; 1) {{space}} upper(get(split( nom ; {{space}} ) ; 2))
+
+get(split( adresse , {{space}} ) ; 1 )
+
+replace ( adresse ; first(split( adresse , {{space}} ) ) ; {{space}} )
+
+formatDate( addYears( {{now}} ; - age ) , YYYY )
+
