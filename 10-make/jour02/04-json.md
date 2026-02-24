@@ -58,3 +58,11 @@ si dans un texte vous avez des guillemets, il faut les échapper
     "prenom" : "toto \" dieoizj \" ",
 }
 ```
+
+pas de création de variable Avant le json 
+
+```json
+const a = {
+    "prenom" : "toto \" dieoizj \" ",
+}
+```
