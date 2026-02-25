@@ -12,7 +12,6 @@ Une équipe souhaite suivre des **demandes internes** (problèmes, idées, besoi
 
 Les demandes sont saisies dans **Notion**, mais doivent aussi être stockées dans une **base structurée** pour le suivi.
 
-
 ---
 
 ## Étape 1 — Créer la base Baserow 
