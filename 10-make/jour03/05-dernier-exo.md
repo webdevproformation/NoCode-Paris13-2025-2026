@@ -22,20 +22,24 @@ Créer une table **`Tickets`** avec les champs suivants :
 - `Titre` (texte)
 - `Description` (texte long)
 - `Priorité` (choix : Basse / Moyenne / Haute)
-- `Statut` (choix : Nouveau / En cours / Terminé)
+- `Statut` (choix : Nouveau / En cours / Terminé) => valeur défaut Nouveau
 - `Source` (texte)
-- `Date de création` (date)
+- `Date de création` (date)                       => pas de valeur par défaut 
 
 ---
 
-## Étape 2 — Créer le back‑office Notion (15 min)
+## Étape 2 — Créer le back‑office Notion 
+
+-  <notion.so> 
+- 
+
 
 Créer une base Notion **“Tickets internes”** avec les propriétés :
 
 - `Titre` (title)
 - `Description` (text)
 - `Priorité` (select)
-- `Statut` (select)
+- `Statut` (select) (choix : Nouveau / En cours / Terminé)
 - `Envoyé vers Baserow ?` (checkbox)
 
 
@@ -63,3 +67,18 @@ Créer un scénario Make :
    - Cocher ✅ `Envoyé vers Baserow ?`
 
 👉 Lancer le scénario une première fois.
+
+
+curl \
+-X POST \
+-H "Authorization: Token 4Wp4EE2a4K7CbraN4soHdVrARU7nlpFe" \
+-H "Content-Type: application/json" \
+"https://api.baserow.io/api/database/rows/table/859457/?user_field_names=true" \
+--data '{
+    "Titre": "string",
+    "Description": "string",
+    "priority": 1,
+    "Statut": 1,
+    "Source": "string",
+    "Date de création": "2020-01-01"
+}'
