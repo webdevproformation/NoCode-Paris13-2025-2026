@@ -35,7 +35,7 @@ Créer une base **`Leads`** avec une table **`Contacts`** contenant :
 
 ---
 
-## Étape 2 — Créer le formulaire Tally (10 min)
+## Étape 2 — Créer le formulaire Tally
 
 Créer un formulaire **“Contact”** avec les champs :
 
@@ -52,23 +52,26 @@ Paramètres :
 
 ---
 
-## Étape 3 — Créer la page Webflow (10 min)
+## Étape 3 — Créer la page Webflow
 
 Créer une page simple :
 
 - Titre : *Contactez‑nous*
 - Texte court explicatif
-- Intégrer le formulaire **Tally** (embed ou lien)
+- Intégrer le formulaire **Tally** (embed <iframe> ou lien)
 
 👉 Publier la page Webflow.
 
 ---
 
-## Étape 4 — Automatisation Make (10 min)
+## Étape 4 — Automatisation Make
+
 Créer un scénario Make :
 
 ### Déclencheur
 - **Tally** : nouvelle réponse au formulaire
+
+<https://airtable.com/create/tokens>
 
 ### Action
 - **Airtable** : créer un enregistrement dans `Contacts`
