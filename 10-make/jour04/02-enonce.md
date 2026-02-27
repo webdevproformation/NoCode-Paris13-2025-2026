@@ -111,6 +111,9 @@ Modifier une formation existante via Tally.
      - Rechercher la formation via `ID formation`
      - Mettre à jour les champs
 
+
+https://airtable.com/developers/web/api/update-record
+
 ✅ Résultat attendu :  
 Les informations de la formation sont modifiées dans Airtable.
 
