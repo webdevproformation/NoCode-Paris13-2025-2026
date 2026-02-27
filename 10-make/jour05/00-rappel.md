@@ -13,15 +13,16 @@
     - ... > Connexion > créer une connexion interne > clé
     - associer la clé à la base dans Notion 
 
-- make 
-    - module interne Airtable / Baserow => ROUGE erreur 
-    - 1er reflexe lire le message d'erreur 
-        - 400 / 401 / 403 => lié à une erreur dans la clé API
-        - parsing 
-            - récupérer une info en format 01/01/2026 mais dans la base elle est attendue 2026-01-01
-            - `Basse` dans Notion et `basse` de Baserow 
-    - module HTTP de Make  
-            - refaire une requête API à la main 
+# Make
+
+- module interne Airtable / Baserow => ROUGE erreur 
+- 1er reflexe lire le message d'erreur 
+    - 400 / 401 / 403 => lié à une erreur dans la clé API
+    - parsing 
+        - récupérer une info en format 01/01/2026 mais dans la base elle est attendue 2026-01-01
+        - `Basse` dans Notion et `basse` de Baserow 
+- module HTTP de Make  
+        - refaire une requête API à la main 
 
 
 ```sh
@@ -55,3 +56,8 @@ curl \
     - schema.base:write
 
 - token => make  
+
+
+# exemple du MCD (Modèle Conceptuel des Données) d'un site e commerce (comme prestahop)
+
+- <https://i.pinimg.com/originals/9a/55/cf/9a55cf03e68bdfe6ba7504bac1f4b87d.png>
