@@ -1,0 +1,13 @@
+.password-input-wrap { position: relative; }
+.password-toggle {
+  position: absolute; right: 8px; top: 50%;
+  transform: translateY(-50%);
+  padding: 6px 10px; font-size: 12px;
+}
+.password-meter { margin-top: 8px; }
+.password-meter-bar {
+  height: 6px; width: 0%;
+  background: #bdc3c7; border-radius: 999px;
+  transition: width .2s ease;
+}
+.password-meter-text { font-size: 12px; margin-top: 6px; opacity: .85; }

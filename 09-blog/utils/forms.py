@@ -16,7 +16,7 @@ class FormulaireInscription(FlaskForm):
     password = PasswordField('password', validators=[
         DataRequired(),
         Length(min=8 , message="Le mot de passe doit contenir au moins 8 caractères."),
-        Regexp(r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$", message="Mot de passe invalide (doit contenir au moins 8 caractères avec lettres minuscule et majuscule, chiffres et caractères spéciaux)")
+        Regexp(r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!?*\.,;:~]).{8,}$", message="Mot de passe invalide (doit contenir au moins 8 caractères avec lettres minuscule et majuscule, chiffres et caractères spéciaux)")
     ] )
     
     confirm_password = PasswordField(
