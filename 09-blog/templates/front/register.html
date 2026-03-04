@@ -1,35 +1,31 @@
 {% extends "base.html" %}
 
-{% block title %}se créer un profil{% endblock %}
+{% from "macros/form_fields.html" import render_field %}
+{% from "macros/flash_messages.html" import render_flash %}
 
-{% block meta %}Créer un profil pour pouvoir gérer le contenu du blog {% endblock %}
+{% block title %}Inscription{% endblock %}
+
+{% block meta %}Créer un profil pour pouvoir gérer le contenu du blog{% endblock %}
 
 {% block contenu %}
 
-{% for error in form.errors %}
-<div class="alert bg-danger">
-    {{ error }}
-</div>
-{% endfor%}
+<h1 class="text-center mb-4">Formulaire d'inscription</h1>
 
-<h1>Formulaire d'inscription</h1>
+{{ render_flash() }}
 
-<form method="POST" class="row">
-    <div class="col-md-4 offset-md-4 mb-3">
-        {{ form.pseudo.label( class_="mb-2") }}
-        {{ form.pseudo(class_="form-control" , placeholder="votre pseudo") }}
-    </div>
-    <div class="col-md-4 offset-md-4 mb-3">
-        {{ form.email.label( class_="mb-2") }}
-        {{ form.email(class_="form-control" , placeholder="votre email") }}
-    </div>
-    <div class="col-md-4 offset-md-4 mb-3">
-        {{ form.password.label( class_="mb-2") }}
-        {{ form.password(class_="form-control" , placeholder="votre password") }}
-    </div>
-    {{ form.csrf_token  }}
-    <div class="text-center">
-        <input type="submit" class="btn btn-success" value="créer votre profil">
+<form method="POST" class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+
+        {{ form.hidden_tag()  }}
+
+        {{ render_field(form.pseudo   , "Votre pseudo", autofocus=True) }}
+        {{ render_field(form.email    , "Votre email") }}
+        {{ render_field(form.password , "Votre mot de passe") }}
+        {{ render_field(form.confirm_password , "Confirmer votre mot de passe") }}
+
+        <div class="d-grid">
+            <input type="submit" class="btn btn-success" value="créer votre profil">
+        </div>
     </div>
 </form>
 

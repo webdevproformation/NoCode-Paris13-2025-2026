@@ -1,0 +1,19 @@
+{% macro render_field(field, placeholder="", autofocus=False) %}
+    <div class="mb-3">
+        {{ field.label(class_="form-label") }}
+
+        {% set field_class = "form-control is-invalid" if field.errors else "form-control" %}
+
+        {{ field(
+            class_=field_class,
+            placeholder=placeholder,
+            autofocus=autofocus
+        ) }}
+
+        {% if field.errors %}
+            <div class="invalid-feedback d-block">
+                {{ field.errors[0] }}
+            </div>
+        {% endif %}
+    </div>
+{% endmacro %}

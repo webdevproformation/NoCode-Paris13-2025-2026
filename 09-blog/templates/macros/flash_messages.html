@@ -1,0 +1,21 @@
+{% macro render_flash(category_map=None) %}
+    {% set category_map = category_map or {
+        "error": "danger",
+        "success": "success",
+        "warning": "warning",
+        "info": "info"
+    } %}
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category_map.get(category, 'secondary') }} alert-dismissible fade show text-center"
+                     role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"
+                            aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+{% endmacro %}

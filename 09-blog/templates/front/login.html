@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% from "macros/form_fields.html" import render_field %}
+{% from "macros/flash_messages.html" import render_flash %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block meta %}Connexion{% endblock %}
+
+{% block contenu %}
+
+<h1 class="text-center mb-4">Connexion</h1>
+
+{{ render_flash() }}
+
+<form method="POST" class="row  justify-content-center">
+    <div class="col-md-6 col-lg-4">
+        {{ form.hidden_tag()  }}
+
+        {{ render_field(form.email    , "Votre email", autofocus=True) }}
+        {{ render_field(form.password , "Votre mot de passe") }}
+        
+        <div class="d-grid">
+            <input type="submit" class="btn btn-success" value="Connexion">
+        </div>
+
+    </div>
+</form>
+
+{% endblock %}

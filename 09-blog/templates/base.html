@@ -28,7 +28,7 @@
     <header class="bg-light mb-5">
         <nav class="navbar navbar-expand-md navbar-light container px-3">
             <a href="{{ url_for('home') }}" class="navbar-brand">
-                <img src="{{ url_for('static', filename='favicon/android-icon-48x48.png') }}" alt="mon super blog" class="img-thumbnail rounded-circle">
+                <img src="{{ url_for('static', filename='favicon/android-icon-48x48.png') }}" alt="mon super blog" class="img-thumbnail rounded-circle" width="48" height="48">
             </a>
             <button 
                 class="navbar-toggler" 
@@ -39,12 +39,25 @@
             </button>
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
+                    {% if g.user %}
+                        <li  class="nav-item">
+                            <span class="nav-link fw-bold">Bienvenue {{ g.user.pseudo | upper }}</span>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('admin') }}" class="nav-link">Dashboard</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ url_for('logout') }}" class="nav-link">Déconnexion</a>
+                        </li>
+                    {% else %}
                     <li class="nav-item text-end">
                         <a href="{{ url_for('register') }}" class="nav-link">inscription</a>
                     </li>
                     <li class="nav-item text-end">
-                        <a href="" class="nav-link">connexion</a>
+                        <a href="{{ url_for('login') }}" class="nav-link">connexion</a>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
